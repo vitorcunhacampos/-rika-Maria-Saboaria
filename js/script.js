@@ -1,3 +1,4 @@
+// slide
 if (window.SimpleSlide) {
 
 new SimpleSlide({
@@ -12,3 +13,44 @@ new SimpleSlide({
 if (window.SimpleAnime) {
 new SimpleAnime();
 }
+// clicar no h1 volta ao inicio
+$('.quemsomos h1').click(function(e){
+  e.preventDefault();
+  $(window).scrollTop(0);
+});
+
+$('.qualidade h1').click(function(e){
+  e.preventDefault();
+  $(window).scrollTop(0);
+});
+
+$('.produtos h1').click(function(e){
+  e.preventDefault();
+  $(window).scrollTop(0);
+});
+
+// animações com scroll
+
+$(window).scroll( function(){
+
+  var windowTop = $(this).scrollTop();
+
+$('.anime').each(function (){
+  if(windowTop > $(this).offset().top - 600) {
+    $(this).addClass('anime-init');
+  }
+  else {
+    $(this).removeClass('anime-init')
+  }
+});
+
+$('.anime-i').each(function (){
+  if(windowTop > $(this).offset().top - 600) {
+    $(this).addClass('anime-i-init');
+  }
+  else {
+    $(this).removeClass('anime-i-init')
+  }
+});
+  
+});

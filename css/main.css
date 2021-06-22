@@ -28,8 +28,16 @@ nav ul li a:hover {
 
 .logo img {
   height: 76px;
-  margin-top: 10px;
+  margin-top: 5px;
+  transition: all 1s;
 }
+
+.logo img:hover {
+  transition: all 1s;
+  /*transform: translate3d(25px, 0, 0);*/
+  height: 86px;
+}
+
 .line-color {
   height: 5px;
   display: flex;
@@ -119,13 +127,12 @@ nav ul li a:hover {
 /* Qualidade____________________________________________________________________________________*/
 .qualidade {
   margin-top: 50px;
-  background-image: linear-gradient(to bottom, white, #f5f5f5, white);
+  background-image: linear-gradient(to bottom, white, #e7e7e7, white);
 }
 .qualidade h1 {
   font-size: 28px;
   font-family: LuengoW00-Light;
   text-align: center;
-  font-weight: bolder;
   letter-spacing: 3px;
 }
 
@@ -155,18 +162,18 @@ nav ul li a:hover {
   font-family: LuengoW00-Light;
   text-align: center;
   padding: 30px 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 30px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  word-spacing: 1px;
 }
 .qualidadep {
   margin: 25px auto;
   max-width: 960px;
-  min-height: 200px;
+  min-height: 150px;
   background-color: white;
   border-radius: 10px;
   border: white solid 2px;
-  transition: all 2s;
+  transition: border 2s;
 }
 .qualidadep:hover {
   border: #ffe300 solid 2px;
@@ -269,6 +276,96 @@ nav ul li a:hover {
   padding: 0 10px;
   text-align: left;
 }
+
+.container-beneficios {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.beneficiostop {
+  margin: 25px;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 30px;
+  border: white solid 2px;
+  transition: all 2s;
+  align-self: center;
+}
+.beneficiostop:hover {
+  border: #ffeb37 solid 2px;
+  transition: all 0.8s;
+}
+
+.beneficiostop p {
+  padding: 10px;
+}
+
+.beneficiostop h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 0 5px;
+}
+
+.beneficiostop h1::after {
+  content: "";
+  background-color: #ffffff;
+}
+
+.beneficios {
+  margin: 25px;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 30px;
+  border: white solid 2px;
+  transition: all 2s;
+  align-self: flex-end;
+}
+
+.beneficios:hover {
+  border: #dbb22c solid 2px;
+  border-right-width: 20px;
+  transition: all 0.8s;
+}
+
+.beneficios h1::after {
+  content: "";
+  height: 5px;
+  width: 50px;
+  background-color: #ffeb37;
+  display: block;
+  margin: 0 auto;
+  transition: all 1s;
+  border-radius: 2px;
+}
+
+.beneficios2 {
+  margin: 25px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 30px;
+  border: white solid 2px;
+  transition: all 2s;
+  align-self: flex-start;
+}
+
+.beneficios2:hover {
+  border: #ffeb37 solid 2px;
+  transition: all 0.8s;
+  border-left-width: 20px;
+}
+
+.beneficios p {
+  text-align: left;
+  padding: 10px;
+}
+
+.beneficios2 p {
+  text-align: left;
+  padding: 10px;
+}
+
 /* Produtos____________________________________________________________________________________*/
 .produtos {
   background-image: linear-gradient(white, rgb(236, 236, 236), white);
@@ -353,10 +450,11 @@ nav ul li a:hover {
 
 .produto p {
   max-width: 350px;
-  text-align: center;
+  text-align: left;
   font-family: luengoW00-light;
   margin: 0 auto;
   padding: 10px;
+  word-spacing: 2px;
 }
 
 .produto h2 {
@@ -479,6 +577,7 @@ nav ul li a:hover {
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 25px;
+  word-spacing: 2px;
 }
 
 .valores h2 {
@@ -521,6 +620,12 @@ nav ul li a:hover {
   display: block;
   margin: 0 auto;
   border-radius: 5px;
+  transition: all 1s;
+}
+
+.bgi-footer h1:hover:after {
+  width: 35px;
+  transition: all 80ms;
 }
 
 .bgi-footer p {
@@ -567,6 +672,12 @@ nav ul li a:hover {
   background-color: #000000;
   display: block;
   border-radius: 5px;
+  transition: all 1s;
+}
+
+.logoss h1:hover::after {
+  width: 35px;
+  transition: all 80ms;
 }
 
 .direitos-reservados p {
@@ -588,11 +699,14 @@ nav ul li a:hover {
   font-weight: bold;
   margin-bottom: 8px;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .contato p {
   font-family: LuengoW00-Light;
   font-size: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .contato h1::after {
@@ -602,9 +716,41 @@ nav ul li a:hover {
   background-color: #000000;
   display: block;
   border-radius: 5px;
+  transition: all 1s;
+}
+
+.contato h1:hover::after {
+  width: 35px;
+  transition: all 80ms;
 }
 
 .missao {
   max-width: 500px;
   margin-left: 10px;
+}
+
+/* ANIMAÇÃO____________________________________________________________________________________*/
+
+.anime {
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: all 1s;
+}
+
+.anime-init {
+  opacity: 1;
+  transition: all 1s;
+  transform: translate3d(0px, 0, 0);
+}
+
+.anime-i {
+  opacity: 0;
+  transform: translate3d(50px, 0, 0);
+  transition: all 1s;
+}
+
+.anime-i-init {
+  opacity: 1;
+  transition: all 1s;
+  transform: translate3d(0px, 0, 0);
 }
