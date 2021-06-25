@@ -7,6 +7,17 @@
   flex-wrap: wrap;
   max-width: 960px;
 }
+.topheader {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+.bg-menu {
+  margin-top: 90px;
+}
 
 @media only screen and (max-width: 560px) {
   .menu {
