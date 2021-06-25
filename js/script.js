@@ -52,5 +52,31 @@ $('.anime-i').each(function (){
     $(this).removeClass('anime-i-init')
   }
 });
-  
 });
+
+
+// Produtos mais informações 
+
+$('[data-group]').each(function () {
+
+  var $allClick = $(this).find('[data-click]');
+  $allTarget = $(this).find('[data-target]');
+  activeClass = 'active';
+
+  console.log($allClick);
+  $allClick.click(function (e) {
+    e.preventDefault();
+    var id = $(this).data('click'),
+    $target = '[data-target="'+ id +'"]';
+
+  console.log(id)
+    $($target).toggleClass(activeClass);
+    $(this).toggleClass(activeClass);
+
+
+    })
+  })
+
+
+
+

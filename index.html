@@ -115,26 +115,66 @@
     <h1 class="anime">PRODUTOS</h1>
 
     <div class="container-produtos">
-      <div class="produto produto-aveia anime">
+      <div class="produto produto-aveia anime" data-group="aveia">
         <img src="./img/produto-aveia.png" alt="sabonete-aveia">
         <h2>Sabonete Aveia</h2>
-        <p>É considerado muito benéfico para a pele e suas propriedades mais conhecidas são: emoliente, nutritivo, hidratante, suavizante</p>
+        <div data-target="aveia" class="active">
+          <p>É considerado muito benéfico para a pele e suas propriedades mais conhecidas são: emoliente, nutritivo, hidratante, suavizante</p>
+        </div>
+        <div data-target="aveia">
+          <ul>
+            <li>Peso - 58g</li>
+          </ul>
+        </div>
+
+        <a class="saibm-aveia" data-click="aveia">saiba mais</a>
       </div>
 
-      <div class="produto produto-calendula anime-i"><img src="./img/produto-calendola.png" alt="sabonete-calendula">
+      <div class="produto produto-calendula anime-i" data-group="calendula"><img src="./img/produto-calendola.png" alt="sabonete-calendula">
         <h2>Sabonete Calêndula</h2>
-        <p>Possui á ação cicatrizante, suavizante, refrescante, anti-alergênica, antiinflamatória, protetora e restauradora de tecidos, anti-acnêica, anti-séptica, bactericida.</p>
+        <div data-target="calendula" class="active">
+          <p>Possui á ação cicatrizante, refrescante, anti-alergênica, antiinflamatória, protetora e restauradora de tecidos, anti-acnêica.</p>
+        </div>
+        <div data-target="calendula">
+          <ul>
+            <li>Peso - 58g</li>
+          </ul>
+        </div>
+        <a class="saibm-calendula" data-click="calendula">saiba mais</a>
       </div>
 
-      <div class="produto produto-morango anime"><img src="./img/produto-morango.png" alt="sabonete-morango">
+      <div class="produto produto-morango anime" data-group="morango"><img src="./img/produto-morango.png" alt="sabonete-morango">
         <h2>Sabonete Morango</h2>
-        <p>Possui propriedades hidratante, suavizante e remineralizante. Além destas propriedades
-          atua também como antioxidante através das vitaminas C e flavonóides.</p>
+
+        <div data-target="morango" class="active">
+          <p>Possui propriedades hidratante, suavizante e remineralizante. Além destas propriedades
+            atua também como antioxidante através das vitaminas C e flavonóides.</p>
+        </div>
+        <div data-target="morango">
+          <ul>
+            <li>Peso - 58g</li>
+          </ul>
+        </div>
+
+        <a class="saibm-morango" data-click="morango">saiba mais</a>
       </div>
 
-      <div class="produto produto-argila anime-i"><img src="./img/produto-argila.png" alt="sabonete-argila">
+      <div class="produto produto-argila anime-i" data-group="argila">
+        <img src="./img/produto-argila.png" alt="sabonete-argila">
         <h2>Sabonete Argila</h2>
-        <p> Consegue beneficiar peles sensíveis e acneicas, pois tem ação anti-inflamatória que ajuda a controlar a produção de bactérias na região. A propriedade antioxidante da argila preta auxilia no tratamento de rejuvenecimento de peles maduras.</p>
+
+        <div data-target="argila" class="active">
+          <p>A propriedade antioxidante da argila preta auxilia no tratamento de rejuvenecimento de peles maduras, além disso, possui ação anti-inflamatória.</p>
+
+        </div>
+
+        <div data-target="argila">
+          <ul>
+            <li>Peso - 58g</li>
+          </ul>
+        </div>
+
+        <a class="saibm-argila" href="#saibamais-argila" data-click="argila">saiba mais</a>
       </div>
 
     </div>

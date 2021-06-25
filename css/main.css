@@ -8,6 +8,12 @@
   max-width: 960px;
 }
 
+@media only screen and (max-width: 560px) {
+  .menu {
+    justify-content: center;
+  }
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -415,11 +421,21 @@ nav ul li a:hover {
   background: linear-gradient(to top, #cecdcd, #ffffff);
   margin: 10px;
   border-radius: 20px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .produto img {
   height: 150px;
   width: 140px;
-  padding: 40px 130px 26px;
+  padding: 20px 130px 26px;
+  transition: all 1.3s;
+}
+
+.produto img:hover {
+  height: 170px;
+  width: 160px;
 }
 
 .produto-calendula {
@@ -439,13 +455,29 @@ nav ul li a:hover {
   width: 137px;
 }
 
+.produto-calendula img:hover {
+  height: 170px;
+  width: 157px;
+}
+
 .produto-morango img {
   width: 135px;
   height: 160px;
 }
 
+.produto-morango img:hover {
+  width: 155px;
+  height: 180px;
+}
+
 .produto-argila img {
   height: 165px;
+  width: 140px;
+}
+
+.produto-argila img:hover {
+  height: 185px;
+  width: 160px;
 }
 
 .produto p {
@@ -461,7 +493,7 @@ nav ul li a:hover {
   font-family: LuengoW00-light;
   font-size: 22px;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .produto-aveia:hover {
@@ -478,6 +510,102 @@ nav ul li a:hover {
 
 .produto-argila:hover {
   background-image: linear-gradient(to bottom, #383837, #8e8a8a);
+}
+
+.saibm-calendula {
+  color: black;
+  background-color: transparent;
+  padding: 5px 5px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: LuengoW00-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.saibm-argila {
+  color: black;
+  background-color: transparent;
+  padding: 5px 5px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: LuengoW00-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.saibm-morango {
+  color: black;
+  background-color: transparent;
+  padding: 5px 5px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: LuengoW00-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.saibm-aveia {
+  color: black;
+  background-color: transparent;
+  padding: 5px 5px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: LuengoW00-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.saibm-calendula:hover {
+  color: rgb(187, 153, 0);
+  background-color: transparent;
+  border: 2px solid rgb(187, 153, 0);
+}
+
+.saibm-aveia:hover {
+  color: rgb(160, 160, 160);
+  background-color: transparent;
+  border: 2px solid rgb(168, 168, 168);
+}
+
+.saibm-morango:hover {
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.saibm-argila:hover {
+  color: rgb(221, 221, 221);
+  background-color: transparent;
+  border: 2px solid rgb(221, 221, 221);
+}
+
+[data-target] {
+  visibility: hidden;
+  position: absolute;
+  transform: translate3d(-20px, 0, 0);
+  opacity: 0;
+}
+
+.active[data-target] {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0, 0);
+  position: relative;
+  transition: all 1s;
+}
+
+.container-produtos li {
+  margin: 10px 0 58px;
+}
+
+.saibm-morango.active,
+.saibm-argila.active {
+  margin-top: 22px;
 }
 
 @media only screen and (max-width: 434px) {
