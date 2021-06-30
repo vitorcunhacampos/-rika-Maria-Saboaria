@@ -23,11 +23,31 @@
   .menu {
     justify-content: center;
   }
+
+  .bg-menu {
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .bg-menu {
+    margin-top: 172px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .topheader {
+    position: relative;
+  }
+  .bg-menu {
+    margin-top: 0px;
+  }
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 nav ul li {
   margin: 10px;
@@ -36,11 +56,24 @@ nav ul li a {
   color: black;
   font-family: LuengoW00-Light;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
-nav ul li a:hover {
-  font-weight: bolder;
+nav ul li a::after {
+  content: "";
+  display: block;
+  background-color: #ffe300;
+  border-radius: 2px;
+  height: 3px;
+  width: 0%;
+  transition: all 1.5s;
+  margin-top: 2px;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active:after {
+  width: 100%;
+  transition: all 600ms;
 }
 
 .logo img {

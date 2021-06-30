@@ -16,17 +16,21 @@ new SimpleAnime();
 // clicar no h1 volta ao inicio
 $('.quemsomos h1').click(function(e){
   e.preventDefault();
-  $(window).scrollTop(0);
+  $('html, body').animate({
+    scrollTop: 0 }, 1500);
 });
 
 $('.qualidade h1').click(function(e){
   e.preventDefault();
-  $(window).scrollTop(0);
+  $('html, body').animate({
+    scrollTop: 0 }, 1500);
 });
+
 
 $('.produtos h1').click(function(e){
   e.preventDefault();
-  $(window).scrollTop(0);
+  $('html, body').animate({
+    scrollTop: 0 }, 1500);
 });
 
 // animações com scroll
@@ -63,20 +67,32 @@ $('[data-group]').each(function () {
   $allTarget = $(this).find('[data-target]');
   activeClass = 'active';
 
-  console.log($allClick);
+
   $allClick.click(function (e) {
     e.preventDefault();
     var id = $(this).data('click'),
     $target = '[data-target="'+ id +'"]';
 
-  console.log(id)
+
     $($target).toggleClass(activeClass);
     $(this).toggleClass(activeClass);
 
 
-    })
-  })
+    });
+  });
 
+// Scroll Suave 
 
+  $('.menu-nav a').click(function (e) {
+e.preventDefault();
+var id = $(this).attr('href');
+var targetOffset = $(id).offset().top -100;
+console.log(targetOffset);
+
+$('html, body').animate({
+  scrollTop: targetOffset
+}, 1500);
+
+  });
 
 
