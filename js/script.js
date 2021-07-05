@@ -39,23 +39,26 @@ $(window).scroll( function(){
 
   var windowTop = $(this).scrollTop();
 
-$('.anime').each(function (){
+ $('.anime').each(function (){
   if(windowTop > $(this).offset().top - 600) {
     $(this).addClass('anime-init');
   }
   else {
     $(this).removeClass('anime-init')
   }
-});
+ });
 
-$('.anime-i').each(function (){
+ $('.anime-i').each(function (){
   if(windowTop > $(this).offset().top - 600) {
     $(this).addClass('anime-i-init');
   }
   else {
     $(this).removeClass('anime-i-init')
-  }
-});
+  
+  };
+ });
+
+
 });
 
 
@@ -84,15 +87,46 @@ $('[data-group]').each(function () {
 // Scroll Suave 
 
   $('.menu-nav a').click(function (e) {
-e.preventDefault();
-var id = $(this).attr('href');
-var targetOffset = $(id).offset().top -100;
-console.log(targetOffset);
+  e.preventDefault();
+  var id = $(this).attr('href');
+  var targetOffset = $(id).offset().top -100;
+  console.log(targetOffset);
 
-$('html, body').animate({
+  $('html, body').animate({
   scrollTop: targetOffset
+ }, 1500);
+
+});
+
+
+$('.logo').click(function(){
+$('html, body').animate({
+ scrollTop: 0
 }, 1500);
+});
 
+$('.sessao').each(function(){
+var height = $(this).height();
+var offsetTop = $(this).offset().top;
+var id = $(this).attr('id');
+var $itemMenu = $('a[href="#'+ id +'"]');
+
+  $(window).scroll(function(){
+   var scrollTop = $(window).scrollTop();
+   console.log(scrollTop)
+   if(offsetTop < scrollTop +200 && offsetTop + height > scrollTop + 200) {
+     $itemMenu.addClass('active')
+   }
+   else{$itemMenu.removeClass('active')}
   });
+  
 
+
+});
+
+
+$('.mobile-btn').click(function(){
+  $(this).toggleClass('active');
+  $('.menu-nav').toggleClass('mobile-menu')
+});
 

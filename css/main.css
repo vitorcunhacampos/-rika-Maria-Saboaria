@@ -12,36 +12,14 @@
   z-index: 2;
   top: 0;
   width: 100%;
+}
+
+.color-topheader {
   background: white;
 }
 
 .bg-menu {
-  margin-top: 90px;
-}
-
-@media only screen and (max-width: 560px) {
-  .menu {
-    justify-content: center;
-  }
-
-  .bg-menu {
-    margin-top: 120px;
-  }
-}
-
-@media only screen and (max-width: 435px) {
-  .bg-menu {
-    margin-top: 172px;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .topheader {
-    position: relative;
-  }
-  .bg-menu {
-    margin-top: 0px;
-  }
+  margin-top: 80px;
 }
 
 nav ul {
@@ -76,16 +54,19 @@ nav ul li a.active:after {
   transition: all 600ms;
 }
 
+.logo {
+  margin-left: 10px;
+}
+
 .logo img {
-  height: 76px;
+  height: 68px;
   margin-top: 5px;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 
 .logo img:hover {
-  transition: all 1s;
-  /*transform: translate3d(25px, 0, 0);*/
-  height: 86px;
+  transition: all 0.8s;
+  height: 76px;
 }
 
 .line-color {
@@ -133,6 +114,84 @@ nav ul li a.active:after {
   transition: all 0.3s;
 }
 
+@media only screen and (max-width: 545px) {
+  .topheader {
+    max-height: 90px;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .menu-nav {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    color: #dbb22c;
+    border-top: 4px solid;
+    position: relative;
+    cursor: pointer;
+    top: -55px;
+    margin-left: 10px;
+  }
+
+  .mobile-btn::after,
+  .mobile-btn::before {
+    content: "";
+    height: 4px;
+    background: currentColor;
+    display: block;
+    margin-top: 6px;
+    width: 36px;
+    position: relative;
+    transition: transform 0.4s ease;
+  }
+
+  .mobile-btn.active {
+    border-top-color: transparent;
+  }
+
+  .mobile-btn.active:after {
+    transform: rotate(45deg);
+    margin-top: 0;
+    top: 2px;
+  }
+
+  .mobile-btn.active:before {
+    transform: rotate(135deg);
+    margin-top: 0;
+    top: 6px;
+  }
+
+  .menu-nav.mobile-menu {
+    position: fixed;
+    background-color: #f7f7f7;
+    padding: 10px;
+    top: 82px;
+    display: block;
+  }
+
+  .menu-nav.mobile-menu ul {
+    display: block;
+  }
+
+  .menu-nav.mobile-menu ul li a {
+    border-bottom: 2px white solid;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 584px) {
+  .menu-nav ul li a {
+    font-size: 14px;
+  }
+}
+
 /* Slide__________________________________________________________________________________________*/
 [data-slide] {
   position: relative;
@@ -174,6 +233,7 @@ nav ul li a.active:after {
   display: block;
   max-width: 100%;
 }
+
 /* Qualidade____________________________________________________________________________________*/
 .qualidade {
   margin-top: 50px;
@@ -219,7 +279,6 @@ nav ul li a.active:after {
 .qualidadep {
   margin: 25px auto;
   max-width: 960px;
-  min-height: 150px;
   background-color: white;
   border-radius: 10px;
   border: white solid 2px;
