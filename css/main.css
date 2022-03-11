@@ -20,6 +20,7 @@
 
 .bg-menu {
   margin-top: 80px;
+  list-style: none;
 }
 
 nav ul {
@@ -38,9 +39,9 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: "";
+  content: '';
   display: block;
-  background-color: #ffe300;
+  background-color: #ffee00;
   border-radius: 2px;
   height: 3px;
   width: 0%;
@@ -76,7 +77,7 @@ nav ul li a.active:after {
 }
 
 .color1 {
-  content: "";
+  content: '';
   background-color: #ffe300;
   width: 40%;
   height: 5px;
@@ -89,7 +90,7 @@ nav ul li a.active:after {
 }
 
 .color2 {
-  content: "";
+  content: '';
   background-color: #dbb22c;
   width: 40%;
   height: 5px;
@@ -102,7 +103,7 @@ nav ul li a.active:after {
 }
 
 .color3 {
-  content: "";
+  content: '';
   background-color: #000000;
   width: 40%;
   height: 5px;
@@ -141,7 +142,7 @@ nav ul li a.active:after {
 
   .mobile-btn::after,
   .mobile-btn::before {
-    content: "";
+    content: '';
     height: 4px;
     background: currentColor;
     display: block;
@@ -193,61 +194,23 @@ nav ul li a.active:after {
 }
 
 /* Slide__________________________________________________________________________________________*/
-[data-slide] {
-  position: relative;
-}
-[data-slide] > * {
-  position: absolute;
-  top: 0px;
-  opacity: 0;
-}
-[data-slide] > .active {
-  position: relative;
-  opacity: 1;
-  transition: opacity 600ms;
-  z-index: 1;
-}
-.js [data-slide-nav] {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.js button {
-  border-radius: 6px;
-  margin: 2px;
-  height: 12px;
-  width: 12px;
-  border: none;
-  background-color: #cecece;
-  display: inline-block;
-  text-indent: -150px;
-  color: white;
-  overflow: hidden;
-}
-
-.js button.active {
-  background-color: #ffe300;
-}
-
-.img-bg {
-  display: block;
-  max-width: 100%;
-}
 
 /* Qualidade____________________________________________________________________________________*/
 .qualidade {
   margin-top: 50px;
   background-image: linear-gradient(to bottom, white, #e7e7e7, white);
+  overflow: hidden;
 }
 .qualidade h1 {
-  font-size: 28px;
+  font-size: 23px;
   font-family: LuengoW00-Light;
   text-align: center;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .qualidade h1::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 50px;
   background-color: #ffe300;
@@ -258,7 +221,7 @@ nav ul li a.active:after {
 }
 
 .qualidade h1:hover::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 90px;
   background-color: #ffe300;
@@ -268,25 +231,38 @@ nav ul li a.active:after {
 }
 
 .qualidade p {
-  font-size: 18px;
+  font-size: 15px;
   font-family: LuengoW00-Light;
   text-align: center;
-  padding: 30px 10px;
-  letter-spacing: 1px;
-  line-height: 25px;
+  padding: 15px 10px;
+  letter-spacing: 1.5px;
+  line-height: 23px;
   word-spacing: 1px;
+  text-transform: uppercase;
 }
 .qualidadep {
   margin: 25px auto;
   max-width: 960px;
-  background-color: white;
-  border-radius: 10px;
-  border: white solid 2px;
-  transition: border 2s;
+  height: 190px;
 }
-.qualidadep:hover {
-  border: #ffe300 solid 2px;
-  transition: all 0.8s;
+
+.qualidadeP::after {
+  content: '|';
+  margin-left: -5px;
+  opacity: 1;
+  animation: blink 0.8s infinite;
+  font-size: 20px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .cliente {
@@ -390,7 +366,7 @@ nav ul li a.active:after {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: line;
 }
 
 .beneficiostop {
@@ -418,7 +394,7 @@ nav ul li a.active:after {
 }
 
 .beneficiostop h1::after {
-  content: "";
+  content: '';
   background-color: #ffffff;
 }
 
@@ -429,17 +405,15 @@ nav ul li a.active:after {
   border-radius: 30px;
   border: white solid 2px;
   transition: all 2s;
-  align-self: flex-end;
 }
 
 .beneficios:hover {
   border: #dbb22c solid 2px;
-  border-right-width: 20px;
   transition: all 0.8s;
 }
 
 .beneficios h1::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 50px;
   background-color: #ffeb37;
@@ -479,6 +453,7 @@ nav ul li a.active:after {
 .produtos {
   background-image: linear-gradient(white, rgb(236, 236, 236), white);
   width: 100%;
+  overflow: hidden;
 }
 .produtos h1 {
   margin-top: 60px;
@@ -491,7 +466,7 @@ nav ul li a.active:after {
 }
 
 .produtos h1::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 50px;
   background-color: #ffe300;
@@ -502,7 +477,7 @@ nav ul li a.active:after {
 }
 
 .produtos h1:hover::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 90px;
   background-color: #ffe300;
@@ -520,11 +495,11 @@ nav ul li a.active:after {
 }
 
 .produto {
-  max-width: 400px;
+  width: 160px;
   background: linear-gradient(to top, #cecdcd, #ffffff);
   margin: 10px;
   border-radius: 20px;
-  min-height: 360px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -532,7 +507,6 @@ nav ul li a.active:after {
 .produto img {
   height: 150px;
   width: 140px;
-  padding: 20px 130px 26px;
   transition: all 1.3s;
 }
 
@@ -755,7 +729,7 @@ nav ul li a.active:after {
 }
 
 .quemsomos h1::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 50px;
   background-color: #ffe300;
@@ -766,7 +740,7 @@ nav ul li a.active:after {
 }
 
 .quemsomos h1:hover::after {
-  content: "";
+  content: '';
   height: 5px;
   width: 90px;
   background-color: #ffe300;
@@ -779,7 +753,7 @@ nav ul li a.active:after {
   margin: 25px;
   max-width: 600px;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 15px;
   border: white solid 2px;
   transition: all 2s;
 }
@@ -799,9 +773,8 @@ nav ul li a.active:after {
   transition: all 0.8s;
 }
 
-.valores p,
-.valores h2 {
-  font-size: 18px;
+.valores p {
+  font-size: 14px;
   font-family: LuengoW00-Light;
   text-align: center;
   padding: 0px 10px 10px 10px;
@@ -813,7 +786,14 @@ nav ul li a.active:after {
 
 .valores h2 {
   font-weight: bold;
-  padding-top: 10px;
+  font-size: 16px;
+  font-family: LuengoW00-Light;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 25px;
+  word-spacing: 2px;
 }
 
 .v3 {
@@ -844,7 +824,7 @@ nav ul li a.active:after {
 }
 
 .bgi-footer h1::after {
-  content: " ";
+  content: ' ';
   height: 4px;
   width: 25px;
   background-color: white;
@@ -897,7 +877,7 @@ nav ul li a.active:after {
 }
 
 .logoss h1::after {
-  content: " ";
+  content: ' ';
   height: 4px;
   width: 25px;
   background-color: #000000;
@@ -941,7 +921,7 @@ nav ul li a.active:after {
 }
 
 .contato h1::after {
-  content: " ";
+  content: ' ';
   height: 4px;
   width: 25px;
   background-color: #000000;
@@ -984,4 +964,48 @@ nav ul li a.active:after {
   opacity: 1;
   transition: all 1s;
   transform: translate3d(0px, 0, 0);
+}
+
+.slide,
+.beneficioss {
+  display: flex;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.slide:hover,
+.beneficioss:hover {
+  will-change: transform;
+}
+
+.slide li,
+.beneficioss li {
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.slide li img {
+  max-width: 100%;
+}
+.slide li.active,
+.beneficioss li.active {
+  transform: scale(1);
+  opacity: 1;
+}
+.slide-wrapper,
+.container-beneficios {
+  overflow: hidden;
+}
+
+.slide li,
+.beneficioss li {
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
